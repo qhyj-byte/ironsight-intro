@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronSight - 船舶工业数据采集与管理平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f7f8ff;
+            color: #2d2d44;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #6b7aff, #4a5cd8);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px;
+            color: #333355;
+        }
+        /* 产品截图展示区域 */
+        .show-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        .web-card {
+            grid-column: 1 / -1;
+        }
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(107, 122, 255, 0.1);
+        }
+        .card h3 {
+            margin-bottom: 16px;
+            color: #4a5cd8;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #e8ebff;
+        }
+        /* 服务价格表格 */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(107, 122, 255, 0.1);
+            margin-bottom: 80px;
+        }
+        .price-table th, .price-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .price-table th {
+            background-color: #6b7aff;
+            color: white;
+        }
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+        .price-tag {
+            color: #d84a4a;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        /* 底部联系区域 */
+        .contact-box {
+            background: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(107, 122, 255, 0.1);
+        }
+        .contact-box h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        .mail-link {
+            font-size: 20px;
+            color: #4a5cd8;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .mail-link:hover {
+            text-decoration: underline;
+        }
+        /* 响应式适配手机 */
+        @media(max-width:768px) {
+            .show-group {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 30px;
+            }
+            .price-table th, .price-table td {
+                padding: 12px 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IronSight</h1>
+        <p>便捷、高效、智能的船舶工业数据采集与管理平台，让技术解放工业生产力</p>
+    </header>
+
+    <div class="container">
+        <!-- 产品界面展示 -->
+        <h2 class="section-title">产品界面预览</h2>
+        <div class="show-group">
+            <!-- Web管理端 -->
+            <div class="card web-card">
+                <h3>Web 后台管理系统</h3>
+                <img src="./web.png" alt="IronSight Web登录界面">
+                <p style="margin-top:12px;color:#666;">PC端后台，数据看板、权限管控、全局数据统计、自定义平台对接</p>
+            </div>
+            <!-- APP登录页 -->
+            <div class="card">
+                <h3>移动端APP - 登录页</h3>
+                <img src="./app1.png" alt="船舶数据采集APP登录">
+                <p style="margin-top:12px;color:#666;">手机号密码登录，离线本地存储采集数据</p>
+            </div>
+            <!-- APP功能首页 -->
+            <div class="card">
+                <h3>移动端APP - 功能首页</h3>
+                <img src="./app2.png" alt="APP操作首页">
+                <p style="margin-top:12px;color:#666;">离线采集、数据编辑上传、文档生成、质检审核一体化</p>
+            </div>
+        </div>
+
+        <!-- 服务与价格表格 -->
+        <h2 class="section-title">服务套餐与收费标准</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>服务类型</th>
+                    <th>核心功能说明</th>
+                    <th>收费标准</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>移动端APP基础服务</td>
+                    <td>支持船舶离线环境数据采集；联网后一键同步上传本地采集数据；基础数据导出、文档生成、质检审核功能</td>
+                    <td class="price-tag">300元/账户/月</td>
+                </tr>
+                <tr>
+                    <td>Web后台管理服务</td>
+                    <td>可视化数据看板、全局数据统计分析、分级账户权限管理、数据批量导出、报表自动生成</td>
+                    <td class="price-tag">300元/账户/月</td>
+                </tr>
+                <tr>
+                    <td>定制化私有部署服务</td>
+                    <td>对接企业内部自定义业务平台；私有化本地/云服务器部署；功能定制开发、专属运维支持、独立数据库隔离</td>
+                    <td>商务面议，发送邮件获取方案报价</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 联系方式 -->
+        <div class="contact-box">
+            <h3>业务咨询与合作</h3>
+            <p>如有功能定制、部署咨询、套餐采购需求，请发送邮件联系</p>
+            <a class="mail-link" href="mailto:Ly@qihengyuanjian.com">Ly@qihengyuanjian.com</a>
+        </div>
+    </div>
+</body>
+</html>
